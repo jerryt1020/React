@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
                            value={this.props.txt}
                            onChange={this.props.onTextChange}
                            className="form-control"
-                    style={{'margin-right':'5px'}}/>
+                    style={{'marginRight':'5px'}}/>
                 </div>
                 <input type="button" className="btn btn-primary" onClick={this.props.onSearchBtnClick} value="Search"/>
                 <hr/>

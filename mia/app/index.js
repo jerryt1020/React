@@ -18,7 +18,7 @@ class App extends React.Component {
             {id: 7, name: '商品007-我是鞋子', img: 'http://fakeimg.pl/242x200'},
             {id: 8, name: '商品008-我是褲子', img: 'http://fakeimg.pl/242x200'},
             {id: 9, name: '商品009-我是衣服', img: 'http://fakeimg.pl/242x200'},
-            {id: 9, name: '商品010-我是褲子', img: 'http://fakeimg.pl/242x200'}
+            {id: 10, name: '商品010-我是褲子', img: 'http://fakeimg.pl/242x200'}
 
         ];
         this.state = {
