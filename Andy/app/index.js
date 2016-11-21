@@ -15,18 +15,18 @@ const itemStyle = {
 class SalePage extends React.Component {
     constructor(props){
         super(props);
-        this.imgSrcUrl = 'http://fakeimg.pl/';
+        this.imgSrcUrl = 'http://fakeimg.pl/300';
         this.itemList = [
-            {id:1, name: "電視", imgSize: "300"},
-            {id:2, name: "冰箱", imgSize: "300"},
-            {id:3, name: "洗衣機", imgSize: "300"},
-            {id:4, name: "冷氣", imgSize: "300"},
-            {id:5, name: "脫水機", imgSize: "300"},
-            {id:6, name: "電風扇", imgSize: "300"},
-            {id:7, name: "除濕機", imgSize: "300"},
-            {id:8, name: "暖氣機", imgSize: "300"},
-            {id:9, name: "乾衣雞", imgSize: "300"},
-            {id:10, name: "iPhone7", imgSize: "300"}];
+            {id:1, name: "電視"},
+            {id:2, name: "冰箱"},
+            {id:3, name: "洗衣機"},
+            {id:4, name: "冷氣"},
+            {id:5, name: "脫水機"},
+            {id:6, name: "電風扇"},
+            {id:7, name: "除濕機"},
+            {id:8, name: "暖氣機"},
+            {id:9, name: "乾衣雞"},
+            {id:10, name: "iPhone7"}];
     }
 
     render() {
@@ -42,7 +42,7 @@ class SalePage extends React.Component {
                     {
                         this.itemList.map(item =>(
                             <div className="col-lg-3" key={item.id} style={itemStyle} >
-                                <img src={this.imgSrcUrl + item.imgSize} alt={item.name} />
+                                <img src={this.imgSrcUrl} alt={item.name} style={{height:'300px'}}/>
                                 <h4>{item.name}</h4>
                             </div>
                         ))
