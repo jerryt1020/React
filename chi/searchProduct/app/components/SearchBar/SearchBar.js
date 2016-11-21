@@ -1,24 +1,31 @@
 import React,{PropTypes} from 'react';
 
 const SearchBar = (props) =>(
-    <div>
-        <h1>搜尋商品清單</h1>
-        <input type="text"
-               value={props.keyword}
-               onChange={props.onKeywordChange}/>
-        <button onClick={props.onSearchClick}>Search</button>
+    <div className={'form-inline text-center'}>
+        <div className={'input-group'}>
+            <input type="text"
+                   className={'form-control'}
+                   value={props.keyword}
+                   onChange={props.onKeywordChange}
+                   placeholder={'搜尋...'}/>
+            <span className={'input-group-btn'}>
+                <button onClick={props.onSearchClick} className={'btn btn-primary'}>Search</button>
+            </span>
+        </div>
     </div>
 );
 
-SearchBar.propTypes={
-    keyword:PropTypes.string,
-    onKeywordChange:PropTypes.func,
-    onSearchClick:PropTypes.func
+SearchBar.propTypes = {
+    keyword: PropTypes.string,
+    onKeywordChange: PropTypes.func,
+    onSearchClick: PropTypes.func
 };
-SearchBar.defaultProps={
-    keyword:'',
-    onKeywordChange: ()=>{},
-    onSearchClick: ()=>{}
+SearchBar.defaultProps = {
+    keyword: '',
+    onKeywordChange: ()=> {
+    },
+    onSearchClick: ()=> {
+    }
 };
 export default SearchBar;
 

@@ -1,34 +1,34 @@
 import React,{PropTypes} from 'react';
 import ReactDOM from "react-dom";
+import styles from "./productListStyles"
 
 class ProductList extends React.Component {
     constructor(props) {
         super(props);
-
     };
+
     render() {
         return (
-            <div>
-                <ul>
+            <div style={{marginTop:'20px'}}>
+                <ul style={{listStyle:'none'}}>
                     {
                         this.props.products.map((item, index)=> {
-
-                            if ((item.name.indexOf(this.props.keywordProduct) >=0)) {
+                            if ((item.name.indexOf(this.props.keywordProduct) >= 0)) {
                                 return (
-                                    <li key={index}>
-                                        <figure>
-                                            <img src={item.imgURL}/>
-                                            <h3>{item.name}</h3>
+                                    <li key={index}
+                                        style={{display:'inline-block',margin:'10px',boxSizing:'border-box'}}>
+                                        <figure className={'text-center'}>
+                                            <img src={item.imgUrl}/>
+                                            <h4 style={this.props.keywordProduct? styles.titleStyle : {}}>{item.name}</h4>
                                         </figure>
                                     </li>);
                             }
 
                         })
                     }
-
                 </ul>
-
             </div>
+
         );
     }
 
